@@ -8,6 +8,15 @@ layout: compress
 <!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
 <head>
     {% include head.html %}
+    <style type="text/css">
+        @font-face {
+            font-family: Bebas;
+            src: url(assets/fonts/BebasNeue.otf);
+        }
+        .judul{
+            font-family: Bebas;
+        }
+    </style>
 </head>
 <body>
     {% include nav.html %}
@@ -19,8 +28,8 @@ layout: compress
                         <img src="{{ site.logo }}" class="img-circle zoombtn animated rotateIn">
                     </a>
                     <h3 class="title">
-                        <a class="zoombtn" href="{{ site.url }}">
-                        	<p style="font-size:1.2rem;font-weight:300">{{ site.title }}</p>
+                        <a style="font-size:2rem;font-weight:300;color: #489DA3" class="zoombtn judul" href="{{ site.url }}">
+                        	{{ site.title }}
 			            </a>
                     </h3>
                     <hr class="hr-line">
@@ -37,6 +46,8 @@ layout: compress
                          </a>
                          <a class="btn zoombtn" href="{{ site.url }}/posts">
                          Posts
+                         </a><a class="btn zoombtn" href="{{ site.url }}/tags">
+                         Tags
                          </a>
                          <a class="btn zoombtn" href="{{ site.url }}/projects">
                          Projects
